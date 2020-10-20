@@ -1,0 +1,81 @@
+body {
+  font-family: "Staatliches", cursive;
+}
+
+h1,
+h2 {
+  margin: 20px 0 0 0;
+  font-size: 45px;
+}
+
+h2 {
+  text-align: right;
+}
+
+h2:hover {
+  cursor: pointer;
+}
+
+a {
+  color: black;
+}
+
+a:hover {
+  text-decoration: none;
+  color: darkblue;
+  cursor: pointer;
+}
+
+h4 {
+  line-height: 60px;
+  margin: 0 auto;
+  font-weight: bold;
+}
+
+h5 {
+  margin: 0px 0 20px 0;
+  font-size: 18px;
+  font-weight: 200;
+}
+
+p {
+  text-align: center;
+}
+
+button {
+  display: block;
+  margin: 0 auto;
+  margin-top: 20px;
+  background: black;
+  color: white;
+  transition: all 0.3s ease-in-out;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 20px;
+}
+
+button:hover {
+  background: #fff;
+  color: #000;
+  cursor: pointer;
+}
+
+.container {
+  border: solid;
+  border-radius: 25px;
+  margin-top: 60px;
+  background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+}
+
+.later-today {
+  text-align: right;
+}
+.main-image {
+  width: 50px;
+}
+
+.forecast-image {
+  width: 50px;
+  display: block;
+  margin: 0 auto;
+}

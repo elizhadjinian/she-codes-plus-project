@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Elizabeth Hadjinian Project</title>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+  <link rel="stylesheet" href="src/styles.css" />
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-7">
+        <h1 id="city-heading"></h1>
+      </div>
+      <div class="col-5">
+        <h2 id="main-temp"><a href="#"> 72°F</a></h2>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-8">
+        <h5 id="day-time"></h5>
+      </div>
+      <div class="col-4">
+        <h5 class="later-today"><span id="sunset">Sunset: 7:42pm</span> <br /><span id="tonight">Tonight: 55°F<span>
+        </h5>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-9">
+        <form id="enter-city-input">
+          <input type="text" class="form-control" placeholder="enter city" autofocus autocomplete="off"
+            id="city-input" />
+        </form>
+      </div>
+      <div class="col-3">
+        <input type="submit" class="form-control" value="Search" />
+      </div>
+    </div>
+
+    <hr />
+
+    <h4>This Week's Forecast</h4>
+
+    <div class="row" class="forecast">
+      <div class="col-2">
+        <img src="images/sun icon.jpg" alt="sun-icon" class="forecast-image" />
+        <p>Thursday <br />71°F / 55°F</p>
+      </div>
+
+      <div class="col-2">
+        <img src="images/sun icon.jpg" alt="sun-icon" class="forecast-image" />
+        <p>Friday <br />62°F / 43°F</p>
+      </div>
+
+      <div class="col-2">
+        <img src="images/cloud icon.jpg" alt="cloud-icon" class="forecast-image" />
+        <p>Saturday <br />64°F / 45°F</p>
+      </div>
+
+      <div class="col-2">
+        <img src="images/cloud icon.jpg" alt="cloud-icon" class="forecast-image" />
+        <p>Sunday <br />68°F / 45°F</p>
+      </div>
+
+      <div class="col-2">
+        <img src="images/sun icon.jpg" alt="sun-icon" class="forecast-image" />
+        <p>Monday <br />71°F / 49°F</p>
+      </div>
+
+      <div class="col-2">
+        <img src="images/sun icon.jpg" alt="sun-icon" class="forecast-image" />
+        <p>Tuesday <br />75°F / 52°F</p>
+      </div>
+    </div>
+  </div>
+
+  <button id="current-location-button">Current location</button>
+  <script src="src/index.js"></script>
+</body>
+
+</html>
