@@ -62,6 +62,7 @@ button:hover {
 
 a {
   color: blue;
+  line-height: 5px;
 }
 
 .container {
