@@ -19,6 +19,7 @@ let formattedDateTime = `${currentDay} ${currentHour}:${currentMinutes}`;
 let dayTime = document.querySelector("#day-time");
 dayTime.innerHTML = `${formattedDateTime}`;
 
+
 //change City with Searchbar
 
 function changeCity(event) {
@@ -36,11 +37,14 @@ searchForm.addEventListener("submit", changeCity);
 
 function getTemp(response) {
   let mainTemperature = document.querySelector("#main-temp");
+  let temperature = Math.round(response.data.main.temp);
+  mainTemperature.innerHTML = `${temperature}°F`;
   let heading = document.querySelector("#city-heading");
   let cityName = `${response.data.name}`;
   heading.innerHTML = `${cityName}`;
-  let temperature = Math.round(response.data.main.temp);
-  mainTemperature.innerHTML = `${temperature}°F`;
+  let tonightTemp = document.querySelector("#tonight")
+  let tonight = Math.round(response.data.main.temp_min)
+  tonightTemp.innerHTML = `Low: ${tonight}°F`
 }
 
 function retrieveTemp(position) {
@@ -53,6 +57,11 @@ function retrieveTemp(position) {
 }
 
 navigator.geolocation.getCurrentPosition(retrieveTemp);
+
+
+
+
+//current location button
 
 let currentLocationButton = document.querySelector("#current-location-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
