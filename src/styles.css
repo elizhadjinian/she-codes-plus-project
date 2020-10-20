@@ -60,6 +60,10 @@ button:hover {
   cursor: pointer;
 }
 
+a {
+  color: blue;
+}
+
 .container {
   border: solid;
   border-radius: 25px;
