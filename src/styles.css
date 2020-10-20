@@ -60,14 +60,10 @@ button:hover {
   cursor: pointer;
 }
 
-a {
-  color: blue;
-  line-height: 5px;
-}
-
 .container {
   border: solid;
-  border-radius: 25px;
+  border-width: thin;
+  border-radius: 15px;
   margin-top: 60px;
   background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
 }
@@ -83,4 +79,14 @@ a {
   width: 50px;
   display: block;
   margin: 0 auto;
+}
+
+.bottom-text {
+  line-height: 100px;
+  text-decoration: none;
+  text-align: center;
+}
+
+.source-link {
+  color: blue;
 }
