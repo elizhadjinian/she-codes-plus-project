@@ -1,5 +1,4 @@
 body {
-  font-family: "Staatliches", cursive;
 }
 
 h1,
@@ -65,7 +64,6 @@ button:hover {
   border-width: thin;
   border-radius: 15px;
   margin-top: 60px;
-  background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
 }
 
 .later-today {
