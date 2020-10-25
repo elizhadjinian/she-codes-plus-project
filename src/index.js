@@ -38,13 +38,11 @@ searchForm.addEventListener("submit", changeCity);
 function getTemp(response) {
   let mainTemperature = document.querySelector("#main-temp");
   let temperature = Math.round(response.data.main.temp);
-  mainTemperature.innerHTML = `${temperature}°F`;
   let heading = document.querySelector("#city-heading");
   let cityName = `${response.data.name}`;
+  mainTemperature.innerHTML = `${temperature}°F`;
   heading.innerHTML = `${cityName}`;
-  let tonightTemp = document.querySelector("#tonight")
-  let tonight = Math.round(response.data.main.temp_min)
-  tonightTemp.innerHTML = `Low: ${tonight}°F`
+  fahrenheightTemperature = response.data.main.temp;
 }
 
 function retrieveTemp(position) {
@@ -58,8 +56,28 @@ function retrieveTemp(position) {
 
 navigator.geolocation.getCurrentPosition(retrieveTemp);
 
+function showCelsius(event){
+  event.preventDefault();
+  let celsiusTemperature = (fahrenheightTemperature - 32) * 5/9;
+  let temperatureElement = document.querySelector("#main-temp");
+  let celsius = Math.round(celsiusTemperature);
+  temperatureElement.innerHTML = `${celsius}°C`;
+}
 
+let changeToCelsius = document.querySelector("#celsius-temp")
+changeToCelsius.addEventListener("click", showCelsius)
 
+function showFahrenheight(event){
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#main-temp");
+  let fahrenheight = Math.round(fahrenheightTemperature);
+  temperatureElement.innerHTML = `${fahrenheight}°F`;
+}
+
+let changeToFahrenheight = document.querySelector("#fahrenheight-temp")
+changeToFahrenheight.addEventListener("click", showFahrenheight)
+
+let fahrenheightTemperature = null;
 
 //current location button
 

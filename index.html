@@ -8,28 +8,34 @@
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
-  <link rel="stylesheet" href="src/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="src/styles.css" />
 </head>
 
 <body>
   <div class="container">
-
     <div class="row">
+
       <div class="col-7">
         <h1 id="city-heading"></h1>
       </div>
+
       <div class="col-5">
-        <h2 id="main-temp"><a href="#"></a></h2>
+        <h2><span id="main-temp"></span></h2>
+        
       </div>
     </div>
+
 
     <div class="row">
       <div class="col-8">
         <h5 id="day-time"></h5>
       </div>
       <div class="col-4">
-        <h5 class="later-today"><span id="tonight"></span>
-        </h5>
+        <p class = "celsius-fahrenheight">
+          <a href="#" id = "fahrenheight-temp">°F</a> | 
+          <a href ="#" id = "celsius-temp">°C</a>
+        </p>
       </div>
     </div>
 
