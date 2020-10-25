@@ -8,6 +8,10 @@ h2 {
   font-size: 45px;
 }
 
+h1 {
+  margin-left: 25px;
+}
+
 h2 {
   text-align: right;
 }
@@ -32,6 +36,10 @@ h5 {
   margin: 0px 0 20px 0;
   font-size: 18px;
   font-weight: 200;
+}
+
+ul {
+  list-style: none;
 }
 
 p {

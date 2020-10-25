@@ -12,10 +12,27 @@ let days = [
   "Saturday"
 ];
 
+let months = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December"
+]
+
+let currentMonth = months[now.getMonth()];
 let currentDay = days[now.getDay()];
+let currentDate = now.getDate();
 let currentHour = now.getHours();
 let currentMinutes = now.getMinutes();
-let formattedDateTime = `${currentDay} ${currentHour}:${currentMinutes}`;
+let formattedDateTime = `${currentDay} ${currentMonth} ${currentDate}, ${currentHour}:${currentMinutes}`;
 let dayTime = document.querySelector("#day-time");
 dayTime.innerHTML = `${formattedDateTime}`;
 
@@ -40,8 +57,14 @@ function getTemp(response) {
   let temperature = Math.round(response.data.main.temp);
   let heading = document.querySelector("#city-heading");
   let cityName = `${response.data.name}`;
-  mainTemperature.innerHTML = `${temperature}°F`;
+  let descriptionElement = document.querySelector("#description");
+  let description = `${response.data.weather[0].description}`
+  let windspeed = document.querySelector("#windspeed");
+  let theWindspeed = `${response.data.wind.speed}`
   heading.innerHTML = `${cityName}`;
+  mainTemperature.innerHTML = `${temperature}°F`;
+  descriptionElement.innerHTML = `${description}`;
+  windspeed.innerHTML = `windspeed: ${theWindspeed}`;
   fahrenheightTemperature = response.data.main.temp;
 }
 
