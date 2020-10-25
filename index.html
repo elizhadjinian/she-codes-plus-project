@@ -15,42 +15,39 @@
 <body>
   <div class="container">
 
-    <div class="row">
-      <div class = col-12>
+    <div class="row" class = "topRow">
+      <div class = col-8>
       <h4 id="day-time"></h5>
       </div>
-    </div>
-
-
-    <div class="row">
-      <div class="col-7">
-        <h1 id="city-heading"></h1>
-      </div>
-
-      <div class="col-5">
-        <h2><span id="main-temp"></span></h2>
-      </div>
-    </div>
-
-
-    <div class="row">
-      <div class="col-8">
-        <ul>
-          <li id = "description"></li>
-          <li id = "windspeed"></li>
-          <li id = "precipitation"></li>
-        </ul>
-      </div>
       <div class="col-4">
-        <p class = "celsius-fahrenheight">
+        <h4 class = "celsius-fahrenheight">
           <a href="#" id = "fahrenheight-temp">°F</a> | 
           <a href ="#" id = "celsius-temp">°C</a>
-        </p>
+        </h4>
       </div>
     </div>
+    
 
 
-  
+    <div class="row">
+      
+      <div class="col-8">
+        <h1> <img src="images/cloud icon.jpg" alt="cloud-icon" class="main-image" />
+        <span id="city-heading"></span></h1>
+      </div>
+
+      <div class="col-4">
+        <h2><span id="main-temp"></span></h2>
+        <ul class ="detailElements">
+         <li id = "description"></li>
+         <li id = "windspeed"></li>
+        </ul>
+      </div>
+      </div>
+
+
+     
+
 
     <div class="row">
       <div class="col-9">

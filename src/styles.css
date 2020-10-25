@@ -1,16 +1,10 @@
 body {
   font-family: "Syne Mono", monospace;
-  background: black;
 }
 
 h1,
 h2 {
-  margin: 20px 0 0 0;
-  font-size: 45px;
-}
-
-h1 {
-  margin-left: 25px;
+  font-size: 50px;
 }
 
 h2 {
@@ -23,7 +17,6 @@ a {
 
 a:hover {
   text-decoration: none;
-  color: #fff;
   cursor: pointer;
 }
 
@@ -73,16 +66,15 @@ button:hover {
   margin-top: 60px;
 }
 
-.later-today {
+.celsius-fahrenheight {
+  text-align: right;
+}
+.detailElements {
   text-align: right;
 }
 .main-image {
-  width: 50px;
-}
-
-.celsius-fahrenheight {
-  text-align: right;
-  margin-right: 20px;
+  width: 100px;
+  margin: 0 auto;
 }
 
 .forecast-image {
@@ -92,7 +84,6 @@ button:hover {
 }
 
 .bottom-text {
-  color: #fff;
   line-height: 100px;
   text-decoration: none;
   text-align: center;
