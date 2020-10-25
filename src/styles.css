@@ -1,5 +1,6 @@
 body {
   font-family: "Syne Mono", monospace;
+  background: black;
 }
 
 h1,
@@ -22,7 +23,7 @@ a {
 
 a:hover {
   text-decoration: none;
-  color: darkblue;
+  color: #fff;
   cursor: pointer;
 }
 
@@ -65,6 +66,7 @@ button:hover {
 }
 
 .container {
+  background: #fff;
   border: solid;
   border-width: thin;
   border-radius: 15px;
@@ -90,6 +92,7 @@ button:hover {
 }
 
 .bottom-text {
+  color: #fff;
   line-height: 100px;
   text-decoration: none;
   text-align: center;
