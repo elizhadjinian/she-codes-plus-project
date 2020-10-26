@@ -62,6 +62,7 @@ button:hover {
 
 .celsius-fahrenheight {
   text-align: right;
+  font-weight: lighter;
 }
 .detailElements {
   font-size: 28px;
