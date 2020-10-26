@@ -53,6 +53,7 @@ searchForm.addEventListener("submit", changeCity);
 // current temperature
 
 function getTemp(response) {
+
   let mainTemperature = document.querySelector("#main-temp");
   let temperature = Math.round(response.data.main.temp);
   let heading = document.querySelector("#city-heading");
@@ -60,12 +61,20 @@ function getTemp(response) {
   let descriptionElement = document.querySelector("#description");
   let description = `${response.data.weather[0].description}`
   let windspeed = document.querySelector("#windspeed");
-  let theWindspeed = `${response.data.wind.speed}`
+  let theWindspeed = Math.round(response.data.wind.speed);
+  let iconElement = document.querySelector("#main-image");
+
   heading.innerHTML = `${cityName}`;
   mainTemperature.innerHTML = `${temperature}°F`;
   descriptionElement.innerHTML = `${description}`;
-  windspeed.innerHTML = `windspeed: ${theWindspeed}`;
+  windspeed.innerHTML = `windspeed: ${theWindspeed}mph`;
+  iconElement.setAttribute(
+    "src", 
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+
   fahrenheightTemperature = response.data.main.temp;
+  windspeedMiles = response.data.wind.speed;
+
 }
 
 function retrieveTemp(position) {
@@ -85,22 +94,32 @@ function showCelsius(event){
   let temperatureElement = document.querySelector("#main-temp");
   let celsius = Math.round(celsiusTemperature);
   temperatureElement.innerHTML = `${celsius}°C`;
+  let windspeedCalculation = windspeedMiles * 1.609;
+  let windspeedElement = document.querySelector("#windspeed");
+  let windSpeed = Math.round(windspeedCalculation);
+  windspeedElement.innerHTML = `windspeed: ${windSpeed}km/h`;
 }
 
 let changeToCelsius = document.querySelector("#celsius-temp")
 changeToCelsius.addEventListener("click", showCelsius)
+
 
 function showFahrenheight(event){
   event.preventDefault();
   let temperatureElement = document.querySelector("#main-temp");
   let fahrenheight = Math.round(fahrenheightTemperature);
   temperatureElement.innerHTML = `${fahrenheight}°F`;
+  let windspeedCalculation = windspeedMiles;
+  let windspeedElement = document.querySelector("#windspeed");
+  let windSpeed = Math.round(windspeedCalculation);
+  windspeedElement.innerHTML = `windspeed: ${windSpeed}mph`;
 }
 
 let changeToFahrenheight = document.querySelector("#fahrenheight-temp")
 changeToFahrenheight.addEventListener("click", showFahrenheight)
 
 let fahrenheightTemperature = null;
+let windspeedMiles = null;
 
 //current location button
 

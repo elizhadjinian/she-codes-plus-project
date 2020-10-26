@@ -1,14 +1,8 @@
 body {
-  font-family: "Syne Mono", monospace;
 }
 
-h1,
-h2 {
-  font-size: 50px;
-}
-
-h2 {
-  text-align: right;
+h1 {
+  font-size: 45px;
 }
 
 a {
@@ -70,11 +64,10 @@ button:hover {
   text-align: right;
 }
 .detailElements {
-  text-align: right;
-}
-.main-image {
-  width: 100px;
-  margin: 0 auto;
+  font-size: 28px;
+  margin-top: -30px;
+  margin-bottom: 20px;
+  font-weight: lighter;
 }
 
 .forecast-image {
