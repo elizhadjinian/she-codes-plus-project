@@ -131,23 +131,9 @@ function getCurrentLocation(event) {
   navigator.geolocation.getCurrentPosition(retrieveTemp);
 }
 
-function displayForecast (response) {
-  let forecastElement = document.querySelector(`#weather-forecast`);
-  let forecast = response.data.list[0];
-  forecastElement.innerHTML = 
-     `<div class="col-2">
-        <img src="images/sun icon.jpg" alt="sun-icon" class="forecast-image" />
-        <p>Thursday <br />${Math.round(forecast.data.temp_max)}°F / 55°F</p>
-      </div>`
-
-}
-
 function searchCity(city) {
   let apiEndpoint = `https://api.openweathermap.org/data/2.5/weather`;
   let apiKey = `bc2204f2285bd1d52f09483093f391ff`;
   let apiUrl = `${apiEndpoint}?q=${city}&appid=${apiKey}&units=imperial`;
   axios.get(apiUrl).then(getTemp);
-
-  apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}DE&appid=${apiKey}&units=imperial`
-  axios.get(apiUrl).then(displayForecast);
 }
